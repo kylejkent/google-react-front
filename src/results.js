@@ -2,22 +2,35 @@ import React from 'react'
 
 class Results extends React.Component {
 	state = {
-		search: 'Java'
+		search: 'Java',
+		qtyResults: 3
 	}
 	render() {
     return (
 			<>
-// *** NAV PARTIAL START ***
-					// {> navresults}
-// *** NAV PARTIAL END ***
+{/*** NAV PARTIAL START ***/}
+					<nav>
+					<a href="/" className="googleLogo resultsLogo"><img
+					className="googleLogo resultsLogo"
+					src="/img/google.png"
+					alt="Google logo"
+					/></a>
+
+					<form action="/results" method="post">
+					<input type="search" className="resultsPage" name="search"/>
+					<button className="primary resultsPage">Search</button>
+					</form>
+					</nav>
+{/*** NAV PARTIAL END ***/}
 					<section className="resultsPage">
 						<div className="searchPath">
-							<span className="searchPath">{qtyText}</span>
+							<span className="searchPath">{this.state.qtyResults}</span>
 						</div>
 					</section>
-// *** RESULTS LINK ARRAY START ***
-					<section class="searchResults">
-						{{#each results as |result|}}
+{/*** RESULTS LINK ARRAY START ***/}
+{/** comment out results/}
+					{/<section class="searchResults">/}
+						{/{{#each results as |result|}}/}
 						<div>
 							<small>{{result.url}}</small>
 							<h1>
@@ -34,7 +47,7 @@ class Results extends React.Component {
 						</div>
 						{{/each}}
 					</section>
-// *** RESULTS LINK ARRAY END ***
+{/*** RESULTS LINK ARRAY END ***/}
 			</>
     )
   }
