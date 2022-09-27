@@ -7,15 +7,15 @@ class Results extends React.Component {
 	render() {
     return (
 			<>
-								// <!-- *** NAV PARTIAL START *** -->
+// *** NAV PARTIAL START ***
 					{> navresults}
-					// <!-- *** NAV PARTIAL END *** -->
+// *** NAV PARTIAL END ***
 					<section className="resultsPage">
 						<div className="searchPath">
 							<span className="searchPath">{qtyText}</span>
 						</div>
 					</section>
-					// <!-- *** RESULTS LINK ARRAY START *** -->
+// *** RESULTS LINK ARRAY START ***
 					<section class="searchResults">
 						{{#each results as |result|}}
 						<div>
@@ -34,7 +34,7 @@ class Results extends React.Component {
 						</div>
 						{{/each}}
 					</section>
-					// <!-- *** RESULTS LINK ARRAY END *** -->
+// *** RESULTS LINK ARRAY END ***
 			</>
     )
   }
