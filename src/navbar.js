@@ -7,16 +7,13 @@ class Navbar extends React.Component {
 	render() {
     return (
 			<>
-			<nav>
-					<a href="/" className="google-logo results-logo"><img
-						className="googleLogo resultsLogo"
-						src="/img/google.png"
-						alt="Google logo"
+			<nav className="searchres2">
+					<a><img  className="logofront logoresults" src="img/google.png" alt="Google logo"
 					/></a>
 
 					<form action="/results" method="post">
-						<input type="search" className="resultsPage" name="search"/>
-						<button className="primary resultsPage">Search</button>
+						<input type="search" className="resultspage" name="search"/>
+						<button className="primary resultspage">Search</button>
 					</form>
 				</nav>
 			</>
