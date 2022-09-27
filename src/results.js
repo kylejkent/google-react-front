@@ -5,6 +5,12 @@ class Results extends React.Component {
 		search: 'Java',
 		qtyResults: 3
 	}
+	storeSearch = (e) => {
+		console.log(e.target.value)
+		this.setState({
+			search: e.target.value
+		})
+	}
 	render() {
     return (
 			<>
@@ -17,7 +23,7 @@ class Results extends React.Component {
 					/></a>
 
 					<form action="/results" method="post">
-					<input type="search" className="resultsPage" name="search"/>
+					<input type="search" name="search" onKeyUp={e => this.storeSearch(e)}  />
 					<button className="primary resultsPage">Search</button>
 					</form>
 					</nav>
@@ -25,6 +31,7 @@ class Results extends React.Component {
 					<section className="resultsPage">
 						<div className="searchPath">
 							<span className="searchPath">{this.state.qtyResults}</span>
+							<span className="searchPath">{this.state.search}</span>
 						</div>
 					</section>
 {/*** RESULTS LINK ARRAY START ***/}
