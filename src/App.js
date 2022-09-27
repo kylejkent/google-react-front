@@ -2,16 +2,24 @@ import React from 'react'
 
 class Search extends React.Component {
 	state = {
-		input: ''
+		name: '',
+		open: true
+	}
+
+	storeSearch = (e) => {
+		console.log(e.target.value)
+		this.setState({
+			name: e.target.value
+		})
 	}
 
 	render() {
 		return (
-		<div class="wrap-sm">
+		<div className="wrap-sm">
 		  <img className="logofront" src="img/google.png" alt="Google logo" />
 		  <form action="/results" method="post">
-		    <input type="search" name="search" autofocus />
-		    <button className="primary">Search</button>
+		    <input type="search" name="search" onKeyUp={e => this.storeSearch(e)}  />
+		    <button className="primary" >Search</button>
 		  </form>
 		</div>
 		)
