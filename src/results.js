@@ -8,7 +8,7 @@ class Results extends React.Component {
     return (
 			<>
 // *** NAV PARTIAL START ***
-					{> navresults}
+					// {> navresults}
 // *** NAV PARTIAL END ***
 					<section className="resultsPage">
 						<div className="searchPath">
