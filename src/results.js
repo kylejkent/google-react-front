@@ -43,6 +43,7 @@ class Results extends React.Component {
 								<span className="searchPath">{this.state.search}</span>
 							</div>
 						</section>
+						<Result result={this.state.results[0]} />
 					{this.state.results.map((result, i) => {
 						return <Result key={i} result={result} />
 					})}
