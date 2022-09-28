@@ -1,33 +1,17 @@
 import React from 'react'
+import Results from './results'
 
 class Result extends React.Component {
-	state = {
-
-	}
-
 
 	render() {
 		return (
-			<section className="searchResults">
-				<div>
-					<small>{{result.url}}</small>
-					<h1>
-						<a href="{{result.url}}" target="_blank"
-							>{{result.title}}</a
-						>
-					</h1>
-					<p>{{result.description}}</p>
-					<ul>
-						{{#each links as |link|}}
-						<li><a href="{{link.url}}" target="_blank">{{link.title}}</a></li>
-						{{/each}}
-					</ul>
-				</div>
+
+			<section className="singleResult">
+				<h1> {this.props.result.title} </h1>
+				<span> {this.props.result.url} </span>
+				<p> {this.props.result.description}</p>
 			</section>
-
-		)
-	}
-
+		)}
 }
 
 export default Result
