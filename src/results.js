@@ -33,9 +33,9 @@ class Results extends React.Component {
     return (
 			<>
 				<section className="resultsPage">
-						<div className="searchPath">
-							<span className="searchPath">{this.state.qtyResults} search results found</span>
-							<span className="searchPath">{this.state.search}</span>
+						<div className="numres">
+							<span className="numres">{this.state.qtyResults} search results found</span>
+							<span className="numres">{this.state.search}</span>
 						</div>
 					</section>
 					{this.state.results.map((result, index) => {
