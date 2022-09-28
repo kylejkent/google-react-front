@@ -14,7 +14,7 @@ class Results extends React.Component {
 	render() {
     return (
 			<>
-{/*** NAV PARTIAL START ***/}
+{/*** NAV PARTIAL START *** will add as a component/}
 					<nav>
 					<a href="/" className="googleLogo resultsLogo"><img
 					className="googleLogo resultsLogo"
