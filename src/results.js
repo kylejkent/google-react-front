@@ -38,13 +38,20 @@ class Results extends React.Component {
 			: this.state.results.length + ' Results'
 	}
 	render() {
+		const styles = {
+			span: {
+			  display: 'block',
+			  marginBottom: '7px',
+			  marginTop: '7px'
+			}
+		}
     return (
 			<>
 				<Navbar />
 						<main>
 						<section className="resultsPage">
 							<div className="searchPath">
-								<span className="searchPath">{this.qtyText()}</span>
+								<span style={styles.span} className="searchPath">{this.qtyText()}</span>
 							</div>
 						</section>
 						<Result result={this.state.results[0]} />

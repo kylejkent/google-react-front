@@ -21,7 +21,7 @@ class Navbar extends React.Component {
 					marginTop: '10px',
 					borderBottom: '1px solid lightgrey',
 					paddingLeft: '10px',
-					padding: '3px',
+					padding: '5px',
 
 				},
 			input: {
