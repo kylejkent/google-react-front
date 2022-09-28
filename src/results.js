@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar.js'
 
 class Results extends React.Component {
 	state = {
@@ -14,20 +15,7 @@ class Results extends React.Component {
 	render() {
     return (
 			<>
-{/*** NAV PARTIAL START *** will add as a component/}
-					<nav>
-					<a href="/" className="googleLogo resultsLogo"><img
-					className="googleLogo resultsLogo"
-					src="/img/google.png"
-					alt="Google logo"
-					/></a>
-
-					<form action="/results" method="post">
-					<input type="search" name="search" onKeyUp={e => this.storeSearch(e)}  />
-					<button className="primary resultsPage">Search</button>
-					</form>
-					</nav>
-{/*** NAV PARTIAL END ***/}
+			<Navbar />
 					<section className="resultsPage">
 						<div className="searchPath">
 							<span className="searchPath">{this.state.qtyResults}</span>
