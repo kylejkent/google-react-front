@@ -18,7 +18,11 @@ class Navbar extends React.Component {
 			nav: {
 				  display: 'grid',
 				  gridTemplateColumns: '200px auto',
-					marginTop: '10px'
+					marginTop: '10px',
+					borderBottom: '1px solid lightgrey',
+					paddingLeft: '10px',
+					padding: '3px',
+
 				},
 			input: {
 			  width: '400px',
