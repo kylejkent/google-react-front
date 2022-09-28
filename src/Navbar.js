@@ -36,9 +36,6 @@ class Navbar extends React.Component {
 				margin: 'auto',
 				marginRight: '30px',
 				display: 'block'
-			},
-			button: {
-				width: '80px',
 			}
 			}
 		return (
@@ -52,7 +49,7 @@ class Navbar extends React.Component {
 
 				<form>
 					<input type="search" name="search" onKeyUp={e => this.storeSearch(e)} style={styles.input} />
-					<button className="primary resultsPage">Search</button>
+					<button className="primary resultspage">Search</button>
 				</form>
 			</nav>
 		)
