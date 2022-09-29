@@ -2,7 +2,6 @@ import React from 'react'
 import Results from './results'
 
 class Result extends React.Component {
-
 	render() {
 		return (
 			<section className="singleResult">
