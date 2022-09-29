@@ -4,12 +4,8 @@ import Results from './results.js'
 
 class App extends React.Component {
 	state = {
-			values:
-				{
-					search: '',
-					open: true,
-					qtyResults: 5
-				},
+			search: '',
+			searched: false,
 			results:
 				[ {
 					url: 'https://www.w3schools.com/js/default.asp',
@@ -50,15 +46,17 @@ class App extends React.Component {
 				})
 			}
 
-	getResults = () => {}
+		submitSearch = () => {
+			this.setState({searched: true})
+		}
+
+			getResults = () => {}
 
 	render() {
 		return (
 			<>
- 				<Search className=""/>
-			<hr/>
-			<br/>
-				<Results values={this.state.values} results={this.state.results}  />
+			{this.state.searched == false ? <Search storeSearch={this.storeSearch} submitSearch={this.submitSearch}/> : <Results search={this.state.search} results={this.state.results}
+			storeSearch={this.storeSearch}  />}
 			</>
 
 		)
