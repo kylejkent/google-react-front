@@ -2,10 +2,7 @@ import React from 'react'
 import App from './App.js'
 
 class Search extends React.Component {
-	state = {
-		name: '',
-		open: true
-	}
+
 
 	storeSearch = (e) => {
 		console.log(e.target.value)
