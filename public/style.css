@@ -3,7 +3,7 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-input[type="search"] {
+input[name="search"] {
   border-color: 1px solid #c4c4c4;
   border-radius: 20px;
   color: #5b5b5b;
@@ -32,7 +32,10 @@ img.logofront {
 }
 
 img.logoresults {
-  width: 150px;
+  margin: 0;
+	width: 150px;
+	display: inline-block;
+
 }
 
 button {
@@ -42,6 +45,8 @@ button {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px;
+	background-color: #4285f3;
+  border-color: #1a5fd0;
 }
 
 button.resultspage {
@@ -50,20 +55,17 @@ button.resultspage {
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px;
   margin-top: 0px;
+	background-color: #4285f3;
+	display: inline-block;
+
 }
 
-button.primary {
-  background-color: #4285f3;
-  border-color: #1a5fd0;
-}
-
-button.primary:hover {
+button:hover {
   background-color: #5998ff;
 }
 
-header {
+.header {
   display: grid;
   grid-template-columns: 170px auto;
   border-bottom: 1px solid lightgrey;
