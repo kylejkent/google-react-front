@@ -8,7 +8,7 @@ class Results extends React.Component {
 	render() {
     return (
 			<>
-				<Search className="searchres2"/>
+				<Search />
 				<section>
 						<div className="numres">
 							<span className="numres">{this.props.results.length} search results found</span>
