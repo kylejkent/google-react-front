@@ -30,7 +30,8 @@ class App extends React.Component {
 		return (
 			<>
 			{this.state.searched == false ?
-				<Search storeSearch={this.storeSearch} submitSearch={this.submitSearch} searched={this.state.searched} />
+				<Search storeSearch={this.storeSearch} submitSearch={this.submitSearch} searched={this.state.searched}
+				search={this.state.search}/>
 				:
 				<Results search={this.state.search} results={this.state.results}
 				storeSearch={this.storeSearch}  />}
