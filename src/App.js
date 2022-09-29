@@ -29,8 +29,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<>
-			{this.state.searched == false ? <Search storeSearch={this.storeSearch} submitSearch={this.submitSearch}/> : <Results search={this.state.search} results={this.state.results}
-			storeSearch={this.storeSearch}  />}
+			{this.state.searched == false ?
+				<Search storeSearch={this.storeSearch} submitSearch={this.submitSearch} searched={this.state.searched} />
+				:
+				<Results search={this.state.search} results={this.state.results}
+				storeSearch={this.storeSearch}  />}
 			</>
 
 		)
