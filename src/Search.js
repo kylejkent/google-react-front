@@ -8,7 +8,7 @@ class Search extends React.Component {
 		  <img className="logofront" src="img/google.png" alt="Google logo" />
 
 		    <input type="search" name="search" onKeyUp={e => this.props.storeSearch(e)}  />
-		    <button className="primary" onClick={() => this.props.submitSearch()}>Search</button>
+		    <button className="primary" onKeyUp={() => this.props.submitSearch()}>Search</button>
 
 		</div>
 		)

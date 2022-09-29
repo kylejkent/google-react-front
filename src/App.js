@@ -1,18 +1,22 @@
 import React from 'react'
 import Search from './Search.js'
 import Results from './results.js'
+import axios from 'axios'
 
 class App extends React.Component {
 	state = {
 			search: '',
 			searched: false,
 			results:
+				[]
 		}
 
-		storeSearch = (e) => {
-				console.log(e.target.value)
+		storeSearch = async (e) => {
+				// console.log(e.target.value)
+				let results = await axios.get(`http://localhost:3002/results?search=${e.target.value}`)
 				this.setState({
-					search: e.target.value
+					search: e.target.value,
+					results: results.data
 				})
 			}
 
@@ -20,7 +24,7 @@ class App extends React.Component {
 			this.setState({searched: true})
 		}
 
-			getResults = () => {}
+		getResults = () => {}
 
 	render() {
 		return (
