@@ -1,4 +1,5 @@
 import React from 'react'
+import App from './App.js'
 
 class Search extends React.Component {
 	state = {
@@ -19,7 +20,7 @@ class Search extends React.Component {
 		  <img className="logofront" src="img/google.png" alt="Google logo" />
 		  <form action="/results" method="post">
 		    <input type="search" name="search" onKeyUp={e => this.storeSearch(e)}  />
-		    <button className="primary" >Search</button>
+		    <button className="primary">Search</button>
 		  </form>
 		</div>
 		)
