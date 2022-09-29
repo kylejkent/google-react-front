@@ -14,7 +14,7 @@ class Results extends React.Component {
 						</a>
 		      </div>
 		      <form action="/results" method="post">
-		        <input type="text" name="searchres2"  autofocus/>
+		        <input type="text" name="searchres2"  autoFocus value={this.props.search} onChange={e => this.props.storeSearch(e)}/>
 		        <button className="primary resultspage">
 		          Search
 		        </button>
@@ -22,8 +22,8 @@ class Results extends React.Component {
 	    	</header>
 				<section>
 						<div className="numres">
-							<span className="numres">{this.props.values.qtyResults} search results found</span>
-							<span className="numres">{this.props.values.search}</span>
+							<span className="numres">{this.props.results.length} search results found</span>
+
 						</div>
 					</section>
 					{this.props.results.map((result, index) => {
